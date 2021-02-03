@@ -3,11 +3,11 @@ package com.techrocking.payment.kafka.message;
 public class ItemEvent {
 	private Long orderId;
 	private Long itemId;
-	private Action action;
+	private ItemStatus itemStatus;
 	
-	public static enum Action {
-		ITEMFETCHED,
-		ITEMOUTOFSTOCK
+	public static enum ItemStatus {
+		ITEM_FETCHED,
+		ITEM_OUT_OF_STOCK
 	}
 
 	public Long getOrderId() {
@@ -26,12 +26,12 @@ public class ItemEvent {
 		this.itemId = itemId;
 	}
 
-	public Action getAction() {
-		return action;
+	public ItemStatus getAction() {
+		return itemStatus;
 	}
 
-	public void setAction(Action action) {
-		this.action = action;
+	public void setAction(ItemStatus action) {
+		this.itemStatus = action;
 	}
 
 }

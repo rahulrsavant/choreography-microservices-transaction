@@ -17,7 +17,7 @@ public class GoodsShippedEventListener {
 	@StreamListener(NotificationChannel.INPUT_SHIPPING)
 	public void listenGoodsShipped(@Payload ShippingEvent goodsShippedMessage) {
 		
-		if (ShippingEvent.Action.GOODSSHIPPED.equals(goodsShippedMessage.getAction())) {
+		if (ShippingEvent.ShippingStatus.GOODS_SHIPPED.equals(goodsShippedMessage.getAction())) {
 			logger.info("Received an GoodsShippedEvent for order id: " + goodsShippedMessage.getOrderId());
 
 			if (goodsShippedMessage.getOrderId() != null) {

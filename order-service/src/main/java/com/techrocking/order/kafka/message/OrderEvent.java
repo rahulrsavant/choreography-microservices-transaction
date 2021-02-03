@@ -3,11 +3,11 @@ package com.techrocking.order.kafka.message;
 public class OrderEvent {
 	
 	private Long orderId;
-	private OrderAction action;
+	private OrderStatus itemStatus;
 	
-	public static enum OrderAction {
-		ORDERPLACED,
-		ORDERNOTPLACED
+	public static enum OrderStatus {
+		ORDER_PLACED,
+		ORDER_NOT_PLACED
 	}
 	
 	public Long getOrderId() {
@@ -16,11 +16,11 @@ public class OrderEvent {
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
-	public OrderAction getAction() {
-		return action;
+	public OrderStatus getAction() {
+		return itemStatus;
 	}
-	public void setAction(OrderAction action) {
-		this.action = action;
+	public void setAction(OrderStatus action) {
+		this.itemStatus = action;
 	}
 
 }

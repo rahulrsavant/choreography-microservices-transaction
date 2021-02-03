@@ -22,7 +22,7 @@ public class PaymentReceivedEventListener {
 	@StreamListener(ShippingChannel.INPUT)
 	public void listenItemFetchedEvent(@Payload PaymentEvent paymentReceivedMessage) {
 		
-		if (PaymentEvent.PaymentAction.PAYMENTRECEIVED.equals(paymentReceivedMessage.getAction())) {
+		if (PaymentEvent.PaymentStatus.PAYMENT_RECEIVED.equals(paymentReceivedMessage.getAction())) {
 			logger.info("Received an PaymentReceivedEvent for order id: " + paymentReceivedMessage.getOrderId());
 
 			if (paymentReceivedMessage.getOrderId() != null) {

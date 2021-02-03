@@ -6,8 +6,8 @@ public class PaymentEvent {
 	private PaymentAction action;
 	
 	public static enum PaymentAction {
-		PAYMENTRECEIVED,
-		PAYMENTNOTRECEIVED
+		PAYMENT_RECEIVED,
+		PAYMENT_NOT_RECEIVED
 	}
 
 	public Long getOrderId() {

@@ -20,7 +20,7 @@ public class OrderNotProcessedEventSource {
 
 		OrderEvent message = new OrderEvent();
 		message.setOrderId(orderId);
-		message.setAction(OrderEvent.OrderAction.ORDERNOTPLACED);
+		message.setAction(OrderEvent.OrderStatus.ORDER_NOT_PLACED);
 		
 		MessageChannel messageChannel = orderChannel.outboundOrder();
 		messageChannel.send(MessageBuilder.withPayload(message)

@@ -20,7 +20,7 @@ public class GoodsShippedEventSource {
 
 		ShippingEvent message = new ShippingEvent();
 		message.setOrderId(orderId);
-		message.setAction(ShippingEvent.Action.GOODSSHIPPED);
+		message.setAction(ShippingEvent.ShippingStatus.GOODS_SHIPPED);
 		
 		MessageChannel messageChannel = shippingChannel.outboundShippingt();
 		messageChannel.send(MessageBuilder.withPayload(message)

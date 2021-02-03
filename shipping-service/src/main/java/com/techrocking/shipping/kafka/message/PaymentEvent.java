@@ -3,11 +3,11 @@ package com.techrocking.shipping.kafka.message;
 public class PaymentEvent {
 	
 	private Long orderId;
-	private PaymentAction action;
+	private PaymentStatus paymentStatus;
 	
-	public static enum PaymentAction {
-		PAYMENTRECEIVED,
-		PAYMENTNOTRECEIVED
+	public static enum PaymentStatus {
+		PAYMENT_RECEIVED,
+		PAYMENT_NOT_RECEIVED
 	}
 
 	public Long getOrderId() {
@@ -18,12 +18,12 @@ public class PaymentEvent {
 		this.orderId = orderId;
 	}
 
-	public PaymentAction getAction() {
-		return action;
+	public PaymentStatus getAction() {
+		return paymentStatus;
 	}
 
-	public void setAction(PaymentAction action) {
-		this.action = action;
+	public void setAction(PaymentStatus action) {
+		this.paymentStatus = action;
 	}
 
 }

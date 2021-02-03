@@ -22,7 +22,7 @@ public class ItemFetchedEventListener {
 	@StreamListener(PaymentChannel.INPUT)
 	public void listenItemFetchedEvent(@Payload ItemEvent itemFetchedMessage) {
 
-		if (ItemEvent.Action.ITEMFETCHED.equals(itemFetchedMessage.getAction())) {
+		if (ItemEvent.ItemStatus.ITEM_FETCHED.equals(itemFetchedMessage.getAction())) {
 			logger.info("Received an ItemFetchedEvent for ITEM id: " + itemFetchedMessage.getItemId());
 
 			if (itemFetchedMessage.getOrderId() != null && itemFetchedMessage.getItemId() != null) {

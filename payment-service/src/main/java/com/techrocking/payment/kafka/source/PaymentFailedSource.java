@@ -20,7 +20,7 @@ public class PaymentFailedSource {
 
 		PaymentEvent message = new PaymentEvent();
 		message.setOrderId(orderId);
-		message.setAction(PaymentEvent.PaymentAction.PAYMENTNOTRECEIVED);
+		message.setAction(PaymentEvent.PaymentAction.PAYMENT_NOT_RECEIVED);
 		
 		MessageChannel messageChannel = paymentChannel.outboundPayment();
 		messageChannel.send(MessageBuilder.withPayload(message)

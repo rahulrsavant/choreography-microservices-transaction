@@ -3,10 +3,10 @@ package com.techrocking.notification.kafka.message;
 public class ShippingEvent {
 	
 	private Long orderId;
-	private Action action;
+	private ShippingStatus shippingStatus;
 	
-	public static enum Action {
-		GOODSSHIPPED
+	public static enum ShippingStatus {
+		GOODS_SHIPPED
 	}
 
 	public Long getOrderId() {
@@ -17,12 +17,12 @@ public class ShippingEvent {
 		this.orderId = orderId;
 	}
 
-	public Action getAction() {
-		return action;
+	public ShippingStatus getAction() {
+		return shippingStatus;
 	}
 
-	public void setAction(Action action) {
-		this.action = action;
+	public void setAction(ShippingStatus action) {
+		this.shippingStatus = action;
 	}
 
 }

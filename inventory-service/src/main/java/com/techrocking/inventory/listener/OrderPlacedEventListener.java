@@ -23,7 +23,7 @@ public class OrderPlacedEventListener {
 	@StreamListener(target = InventoryChannel.INPUT_ORDER)
 	public void listenPaymentReceived(@Payload OrderEvent orderEvent) {
 		
-		if(orderEvent.getAction().equals(OrderEvent.OrderAction.ORDERPLACED)) {
+		if(orderEvent.getAction().equals(OrderEvent.OrderStatus.ORDER_PLACED)) {
 			logger.info("Received an OrderPlacedEvent for order id: " + orderEvent.getOrderId());
 			logger.info("Going to fetch item for order id : " + orderEvent.getOrderId());
 			inventoryService.fetchItem(orderEvent.getOrderId());

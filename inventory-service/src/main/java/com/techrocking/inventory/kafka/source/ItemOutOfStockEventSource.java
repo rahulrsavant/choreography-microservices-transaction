@@ -21,7 +21,7 @@ public class ItemOutOfStockEventSource {
 		ItemEvent message = new ItemEvent();
 		message.setItemId(itemId);
 		message.setOrderId(orderId);
-		message.setAction(ItemEvent.Action.ITEMOUTOFSTOCK);
+		message.setItemStatus(ItemEvent.ItemStatus.ITEM_OUT_OF_STOCK);
 		message.setItemId(itemId);
 		
 		MessageChannel messageChannel = inventoryChannel.outboundInventory();

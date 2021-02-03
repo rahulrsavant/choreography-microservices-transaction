@@ -20,7 +20,7 @@ public class PaymentReceivedSource {
 
 		PaymentEvent message = new PaymentEvent();
 		message.setOrderId(orderId);
-		message.setAction(PaymentEvent.PaymentAction.PAYMENTRECEIVED);
+		message.setAction(PaymentEvent.PaymentAction.PAYMENT_RECEIVED);
 		
 		MessageChannel messageChannel = paymentChannel.outboundPayment();
 		messageChannel.send(MessageBuilder.withPayload(message)

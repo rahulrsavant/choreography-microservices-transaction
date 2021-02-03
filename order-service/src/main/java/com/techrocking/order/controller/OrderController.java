@@ -17,6 +17,7 @@ public class OrderController {
 	
 	@PostMapping()
 	public PlaceOrderResponse placeOrder(@RequestBody PlaceOrderRequest request) {
+		System.out.println("Create Order Process ");
 		return orderService.createOrder(request);
 	}
 

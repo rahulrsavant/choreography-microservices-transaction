@@ -21,7 +21,7 @@ public class ItemFetchedEventSource {
 		ItemEvent message = new ItemEvent();
 		message.setItemId(itemId);
 		message.setOrderId(orderId);
-		message.setAction(ItemEvent.Action.ITEMFETCHED);
+		message.setItemStatus(ItemEvent.ItemStatus.ITEM_FETCHED);
 		
 		MessageChannel messageChannel = inventoryChannel.outboundInventory();
 		messageChannel.send(MessageBuilder.withPayload(message)
