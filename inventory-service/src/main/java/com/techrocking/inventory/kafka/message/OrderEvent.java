@@ -16,11 +16,11 @@ public class OrderEvent {
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
-	public OrderStatus getAction() {
+	public OrderStatus getOrderStatus() {
 		return orderStatus;
 	}
-	public void setAction(OrderStatus action) {
-		this.orderStatus = action;
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
 	}
 
 }

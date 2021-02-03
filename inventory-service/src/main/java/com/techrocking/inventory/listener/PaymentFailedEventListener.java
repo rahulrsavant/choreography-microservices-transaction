@@ -21,7 +21,7 @@ public class PaymentFailedEventListener {
 
 	@StreamListener(InventoryChannel.INPUT_PAYMENT)
 	public void listenPaymentFailed(@Payload PaymentEvent paymentFailedMessage) {
-		if (paymentFailedMessage.getAction().equals(PaymentEvent.PaymentStatus.PAYMENT_NOT_RECEIVED)) {
+		if (paymentFailedMessage.getPaymentStatus().equals(PaymentEvent.PaymentStatus.PAYMENT_NOT_RECEIVED)) {
 			logger.info("Received an PaymentFailedEvent for order id: " + paymentFailedMessage.getOrderId());
 
 			if (paymentFailedMessage.getOrderId() != null) {

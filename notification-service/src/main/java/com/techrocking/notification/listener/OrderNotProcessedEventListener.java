@@ -17,7 +17,7 @@ public class OrderNotProcessedEventListener {
 	@StreamListener(target = NotificationChannel.INPUT_ORDER)
 	public void listenOrderNotProcessedEvent(@Payload OrderEvent message) {
 		
-		if (OrderEvent.OrderStatus.ORDER_NOT_PLACED.equals(message.getAction())) {
+		if (OrderEvent.OrderStatus.ORDER_NOT_PLACED.equals(message.getOrderStatus())) {
 			logger.info("Received an OrderNotProcessedEvent for order id: " + message.getOrderId());
 			logger.info("Going to notify user that order place with id :" + 
 		    message.getOrderId() + " could not processed");

@@ -21,7 +21,7 @@ public class ItemOutOfStockListener {
 
 	@StreamListener(OrderChannel.INPUT)
 	public void listenOutOfStockItem(@Payload ItemEvent itemEvent) {
-		if (itemEvent.getAction().equals(ItemEvent.ItemStatus.ITEM_OUT_OF_STOCK)) {
+		if (itemEvent.getItemStatus().equals(ItemEvent.ItemStatus.ITEM_OUT_OF_STOCK)) {
 			logger.info("ItemOutOfStock event received for item id: " + itemEvent.getItemId());
 
 			logger.info("Going to compensate order for id " + itemEvent.getOrderId());

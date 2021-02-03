@@ -17,12 +17,14 @@ public class ShippingEvent {
 		this.orderId = orderId;
 	}
 
-	public ShippingStatus getAction() {
+	public ShippingStatus getShippingStatus() {
 		return shippingStatus;
 	}
 
-	public void setAction(ShippingStatus action) {
-		this.shippingStatus = action;
+	public void setShippingStatus(ShippingStatus shippingStatus) {
+		this.shippingStatus = shippingStatus;
 	}
+
+
 
 }

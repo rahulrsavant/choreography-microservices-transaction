@@ -18,12 +18,14 @@ public class PaymentEvent {
 		this.orderId = orderId;
 	}
 
-	public PaymentStatus getAction() {
+	public PaymentStatus getPaymentStatus() {
 		return paymentStatus;
 	}
 
-	public void setAction(PaymentStatus action) {
-		this.paymentStatus = action;
+	public void setPaymentStatus(PaymentStatus paymentStatus) {
+		this.paymentStatus = paymentStatus;
 	}
+
+
 
 }

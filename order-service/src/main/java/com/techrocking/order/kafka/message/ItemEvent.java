@@ -26,12 +26,14 @@ public class ItemEvent {
 		this.itemId = itemId;
 	}
 
-	public ItemStatus getAction() {
+	public ItemStatus getItemStatus() {
 		return itemStatus;
 	}
 
-	public void setAction(ItemStatus action) {
-		this.itemStatus = action;
+	public void setItemStatus(ItemStatus itemStatus) {
+		this.itemStatus = itemStatus;
 	}
+
+
 
 }

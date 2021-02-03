@@ -3,9 +3,9 @@ package com.techrocking.payment.kafka.message;
 public class PaymentEvent {
 	
 	private Long orderId;
-	private PaymentAction action;
+	private PaymentStatus paymentStatus;
 	
-	public static enum PaymentAction {
+	public static enum PaymentStatus {
 		PAYMENT_RECEIVED,
 		PAYMENT_NOT_RECEIVED
 	}
@@ -18,12 +18,14 @@ public class PaymentEvent {
 		this.orderId = orderId;
 	}
 
-	public PaymentAction getAction() {
-		return action;
+	public PaymentStatus getPaymentStatus() {
+		return paymentStatus;
 	}
 
-	public void setAction(PaymentAction action) {
-		this.action = action;
+	public void setPaymentStatus(PaymentStatus paymentStatus) {
+		this.paymentStatus = paymentStatus;
 	}
+
+
 
 }
