@@ -3,7 +3,7 @@ package com.techrocking.order.kafka.message;
 public class OrderEvent {
 	
 	private Long orderId;
-	private OrderStatus itemStatus;
+	private OrderStatus orderStatus;
 	
 	public static enum OrderStatus {
 		ORDER_PLACED,
@@ -16,12 +16,13 @@ public class OrderEvent {
 	public void setOrderId(Long orderId) {
 		this.orderId = orderId;
 	}
-	public OrderStatus getItemStatus() {
-		return itemStatus;
+	public OrderStatus getOrderStatus() {
+		return orderStatus;
 	}
-	public void setItemStatus(OrderStatus itemStatus) {
-		this.itemStatus = itemStatus;
+	public void setOrderStatus(OrderStatus orderStatus) {
+		this.orderStatus = orderStatus;
 	}
+
 
 
 }

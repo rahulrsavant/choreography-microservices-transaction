@@ -20,7 +20,7 @@ public class OrderPlacedEventSource {
 
 		OrderEvent message = new OrderEvent();
 		message.setOrderId(orderId);
-		message.setItemStatus(OrderEvent.OrderStatus.ORDER_PLACED);
+		message.setOrderStatus(OrderEvent.OrderStatus.ORDER_PLACED);
 
 		MessageChannel messageChannel = orderChannel.outboundOrder();
 		messageChannel.send(MessageBuilder.withPayload(message)
